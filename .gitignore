@@ -4,9 +4,10 @@
 .Ruserdata
 
 literature/
-lit*/
+# lit*/
 data*/
 
+# outputs
 *.pdf
 *.html
 *.doc*
