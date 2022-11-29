@@ -1,0 +1,55 @@
+---
+title: "Test_report"
+author: "Nicole Ibrahim"
+date: today
+format: 
+    html:
+        code-fold: true
+        theme: cosmo
+number-sections: true
+bibliography: 
+    -ref.bib
+csl: ecology.csl
+
+---
+```{r}
+library(ggplot2)
+library(plotly)
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+p <- ggplot(iris, aes(x = Species, y = Sepal.Length)) +
+        geom_boxplot() +
+        geom_jitter(size = 0.6, alpha = 0.9, width = 0.2)
+        theme_light()
+print(p)
+ggplotly(p, tooltop = c("y"))
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+#| fig-cap: "My first figure"
+#| label: fig-dot
+
+
+plot(2 * 2)
+```
+
+What a nice model @eq-reg!
+
+$$
+y= a + bx,
+$${eq-reg}
+where $x$ is the predictor 
+
+The `echo: false` option disables the printing of code (only output is displayed).
